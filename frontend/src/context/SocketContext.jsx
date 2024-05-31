@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
   const user = useRecoilValue(userAtom);
 
   useEffect(() => {
-    const socket = io("http://localhost:8000", {
+    const socket = io("https://whatsapp-social-app-threads.onrender.com", {
       query: {
         userId: user?._id,
       },
